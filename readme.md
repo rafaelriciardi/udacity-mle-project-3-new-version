@@ -13,14 +13,14 @@ Screenshots:
 * Continuous integration process passing:
 <img alt="Continuous integration process passing" src="https://github.com/rafaelriciardi/udacity-mle-project-3-new-version/blob/main/screenshots/continuous_integration.png">
 
-*FastAPI live documentation: 
+* FastAPI live documentation: 
 <img alt="FastAPI live documentation" src="https://github.com/rafaelriciardi/udacity-mle-project-3-new-version/blob/main/screenshots/example.png">
 
-*Render screenshot that shows the auto-deploy turned off to use the webhook for CD process:
+* Render screenshot that shows the auto-deploy turned off to use the webhook for CD process:
 <img alt="CD configuration on Render" src="https://github.com/rafaelriciardi/udacity-mle-project-3-new-version/blob/main/screenshots/continuous_deloyment.png">
 
-*Live API deployed returnig the welcome response (live GET):
+* Live API deployed returnig the welcome response (live GET):
 <img alt="Welcome response" src="https://github.com/rafaelriciardi/udacity-mle-project-3-new-version/blob/main/screenshots/live_get.png">
 
-*Response of the POST script to test the live API (live POST):
+* Response of the POST script to test the live API (live POST):
 <img alt="POST response" src="https://github.com/rafaelriciardi/udacity-mle-project-3-new-version/blob/main/screenshots/live_post.png">
