@@ -43,5 +43,5 @@ def test_training_step(X, y):
 #Check if saved model file is correct
 def test_saved_model():
     # Load the model
-    saved_model = joblib.load("model/model.pkl")
+    saved_model = joblib.load("../model/model.pkl")
     assert isinstance(saved_model, RandomForestClassifier)
