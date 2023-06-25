@@ -36,15 +36,18 @@ class_1_example = {
     "native_country": "Iran"
 }
 
+print("\nExecuting GET request:")
 get_response = requests.get(live_url)
 print(get_response)
 print(get_response.json())
 
+print("\nExecuting POST request on 0 class example:")
 class_0_response = requests.post(live_url + '/predict', 
                                  json = class_0_example)
 print(class_0_response)
 print(class_0_response.json())
 
+print("\nExecuting POST request on 1 class example:")
 class_1_response = requests.post(live_url + '/predict', 
                                  json = class_1_example)
 print(class_1_response)
