@@ -20,10 +20,13 @@ cat_features = [
         "native-country",
     ]
 
+data = pd.read_csv('data/cleaned_census.csv')
+
+train, test = train_test_split(data, test_size=0.20)
+
+
 #Check the processing functions
 def test_process_data():
-    data = pd.read_csv('data/cleaned_census.csv')
-    
     train, test = train_test_split(data, test_size=0.20)
     
     X_train, y_train, encoder, lb = process_data(
@@ -40,7 +43,11 @@ def test_process_data():
 
 #Check if training is returning the correct object type
 def test_training_step(X, y):
-    trained_model = train_model(X, y)
+    X_train, y_train, _, _ = process_data(
+        train, categorical_features=cat_features, label="salary", training=True
+    )
+
+    trained_model = train_model(X_train, y_train)
     assert isinstance(trained_model, RandomForestClassifier)
 
 #Check if saved model file is correct
