@@ -1,5 +1,6 @@
 import pytest
 import joblib
+import pandas as pd
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -20,7 +21,9 @@ cat_features = [
     ]
 
 #Check the processing functions
-def test_process_data(data):
+def test_process_data():
+    data = pd.read_csv('data/cleaned_census.csv')
+    
     train, test = train_test_split(data, test_size=0.20)
     
     X_train, y_train, encoder, lb = process_data(
@@ -43,5 +46,5 @@ def test_training_step(X, y):
 #Check if saved model file is correct
 def test_saved_model():
     # Load the model
-    saved_model = joblib.load("../model/model.pkl")
+    saved_model = joblib.load("model/model.pkl")
     assert isinstance(saved_model, RandomForestClassifier)
