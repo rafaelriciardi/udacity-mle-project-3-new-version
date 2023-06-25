@@ -52,4 +52,5 @@ evaluate_model_slices(trained_model, test, cat_features, encoder, lb)
 
 logging.info("Saving trained model")
 joblib.dump(trained_model, '../model/model.pkl')
+joblib.dump(encoder, '../model/encoder.pkl')
 
