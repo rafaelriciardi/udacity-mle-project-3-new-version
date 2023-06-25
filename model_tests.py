@@ -42,7 +42,7 @@ def test_process_data():
     assert len(X_test) == len(y_test)
 
 #Check if training is returning the correct object type
-def test_training_step(X, y):
+def test_training_step():
     X_train, y_train, _, _ = process_data(
         train, categorical_features=cat_features, label="salary", training=True
     )
